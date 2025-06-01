@@ -1,0 +1,151 @@
+.mainContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 36px;
+
+  @include respond-to(tablet) {
+    padding: 0 16px;
+  }
+  @include respond-to(mobile) {
+    padding: 0 10px;
+  }
+}
+
+.mainContentIntro {
+  margin: 60px 0 20px;
+  max-width: 686px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include respond-to(tablet) {
+    margin-top: 60px;
+  }
+  @include respond-to(mobile) {
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 138%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    max-width: 654px;
+    margin-bottom: 40px;
+    @include respond-to(tablet) {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+    @include respond-to(mobile) {
+      font-size: 34px;
+      line-height: 110%;
+    }
+  }
+
+  span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.1px;
+    color: $color-primary;
+    margin-bottom: 40px;
+    @include respond-to(tablet) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    @include respond-to(mobile) {
+      font-size: 15px;
+    }
+  }
+
+  .listTitle {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+    list-style: disc;
+    margin-top: 0;
+    color: #252b42;
+    margin-bottom: 20px;
+    @include respond-to(tablet) {
+      font-size: 24px;
+    }
+    @include respond-to(mobile) {
+      font-size: 18px;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .listAnimated {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    // opacity: 0;
+    // animation: fadeInUp 1s ease forwards;
+    // animation-delay: 0.3s;
+    text-align: left;
+
+    li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #555;
+
+      @include respond-to(mobile) {
+        margin-bottom: 6px;
+        font-size: 18px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%238d5cf6" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"/></svg>');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.mainDescr {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #737373;
+  letter-spacing: 0.2px;
+
+  p {
+    margin-top: 20px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 18px;
+  }
+
+  @include respond-to(mobile) {
+    font-size: 16px;
+    text-align: left;
+  }
+}

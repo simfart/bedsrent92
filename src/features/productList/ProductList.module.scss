@@ -1,0 +1,49 @@
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px 0 0;
+  margin: 82px 0;
+  flex-wrap: wrap;
+  align-items: start;
+
+  @include respond-to(mobile) {
+    margin: 0;
+    align-items: center;
+  }
+
+  .productsContainer {
+    width: 100%;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: 0.2px;
+    color: #252b42;
+    margin-bottom: 35px;
+    @include respond-to(mobile) {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.productList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /pages/index
+Sitemap: https://arendamed92.ru/sitemap.xml
