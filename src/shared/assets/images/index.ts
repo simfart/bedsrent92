@@ -35,6 +35,8 @@ import wheelchair1Img from './image0.jpeg';
 import wheelchair2Img from './image1.jpeg';
 import wheelchair3Img from './image2.jpeg';
 
+import womanImg from './Woman_img.webp';
+
 import man2 from './Men2.webp';
 
 import poster from './video_poster.webp';
@@ -75,4 +77,5 @@ export {
   wheelchair2Img,
   wheelchair3Img,
   man2,
+  womanImg,
 };

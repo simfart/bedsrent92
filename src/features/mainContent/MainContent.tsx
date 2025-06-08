@@ -3,6 +3,7 @@ import { FC } from 'react';
 import styles from './MainContent.module.scss';
 import ProductList from 'features/productList/ProductList';
 import Faq from 'features/faq/Faq';
+import { womanImg } from 'shared/assets/images';
 
 export const MainContent: FC = () => {
   return (
@@ -14,6 +15,7 @@ export const MainContent: FC = () => {
       <section id="main" className={styles.mainContentIntro}>
         <span>Аренда и доставка по Севастополю</span>
         <h1>Медицинские кровати на дом</h1>
+
         <span className={styles.listTitle}>Мы предлагаем:</span>
         <ul className={styles.listAnimated}>
           <li>Чистые, продезинфицированные и полностью исправные кровати</li>
@@ -21,6 +23,12 @@ export const MainContent: FC = () => {
           <li>Оплату при получении — без риска и предоплаты</li>
         </ul>
         <div className={styles.mainDescr}>
+          <img
+            className={styles.imgMainPhoto}
+            src={womanImg}
+            alt="Женщина на медицинской кровати"
+            loading="eager"
+          />
           <p>
             Уже более 20 лет мы предоставляем в аренду медицинские
             функциональные кровати и средства реабилитации с быстрой доставкой
