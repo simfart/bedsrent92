@@ -13,17 +13,6 @@
   }
 }
 
-.imgMainPhoto {
-  width: 100%;
-  height: auto;
-  display: block;
-  z-index: 3;
-
-  @include respond-to(mobile) {
-    max-width: 100%;
-    height: auto;
-  }
-}
 .mainContentIntro {
   margin: 60px 0 20px;
   max-width: 686px;
@@ -106,9 +95,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    // opacity: 0;
-    // animation: fadeInUp 1s ease forwards;
-    // animation-delay: 0.3s;
     text-align: left;
 
     li {
@@ -137,27 +123,5 @@
         background-size: contain;
       }
     }
-  }
-}
-
-.mainDescr {
-  display: flex;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.4;
-  color: #737373;
-  letter-spacing: 0.2px;
-
-  p {
-    margin-top: 20px;
-  }
-
-  @include respond-to(tablet) {
-    font-size: 18px;
-  }
-
-  @include respond-to(mobile) {
-    font-size: 16px;
-    text-align: left;
   }
 }

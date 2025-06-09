@@ -35,7 +35,7 @@ import wheelchair1Img from './image0.jpeg';
 import wheelchair2Img from './image1.jpeg';
 import wheelchair3Img from './image2.jpeg';
 
-import womanImg from './Woman_img.webp';
+import womanImg from './Woman_img_light.webp';
 
 import man2 from './Men2.webp';
 

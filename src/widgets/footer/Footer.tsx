@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './Footer.module.scss';
-import { mailIcon, phoneIcon, telegramIcon } from 'shared/assets/images';
+import { mailIcon, phoneIcon } from 'shared/assets/images';
 
 export const Footer: FC = () => {
   return (
@@ -10,18 +10,9 @@ export const Footer: FC = () => {
           <img src={phoneIcon} alt="Phone" />
           <span>+7 (978) 941-09-60</span>
         </a>
-        <a href="mailto:contact@arendamed82.ru" className={styles.contactItem}>
+        <a href="mailto:contact@arendamed92.ru" className={styles.contactItem}>
           <img src={mailIcon} alt="Email" />
-          <span>contact@arendamed82.ru</span>
-        </a>
-        <a
-          href="https://t.me/rental_honey_bed"
-          className={styles.contactItem}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={telegramIcon} alt="Telegram" />
-          <span>@rental_honey_bed</span>
+          <span>contact@arendamed92.ru</span>
         </a>
       </div>
     </footer>

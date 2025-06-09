@@ -56,14 +56,7 @@ export const Header: FC = () => {
                   Главная
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => handleClick('about-us')}
-                  aria-label="Переход на страницу о нас"
-                >
-                  О нас
-                </button>
-              </li>
+
               <li>
                 <button
                   onClick={() => handleClick('products')}
@@ -93,7 +86,6 @@ export const Header: FC = () => {
           </button>
         </a>
 
-        {/* Бургер-кнопка */}
         <div
           className={`${styles.burger} ${menuOpen ? styles.active : ''}`}
           data-burger
@@ -124,14 +116,7 @@ export const Header: FC = () => {
                 Главная
               </button>
             </li>
-            <li style={{ animationDelay: '0.2s' }}>
-              <button
-                onClick={() => handleClick('about-us')}
-                aria-label="Переход на страницу о нас"
-              >
-                О нас
-              </button>
-            </li>
+
             <li style={{ animationDelay: '0.3s' }}>
               <button
                 onClick={() => handleClick('products')}
