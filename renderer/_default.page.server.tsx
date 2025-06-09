@@ -58,8 +58,8 @@ export async function render(pageContext: PageContextServer) {
       "openingHours": "Mo-Su 09:00-21:00",
       "image": "https://arendamed82.ru/assets/images/logo1.svg",
       "sameAs": [
-        "https://vk.com/arendamed82",
-        "https://instagram.com/arendamed82"
+        "https://vk.com/club32436534",
+        "https://www.instagram.com/medicalbeds/"
       ],
       "areaServed": [
         "Севастополь",
@@ -71,18 +71,17 @@ export async function render(pageContext: PageContextServer) {
     }
     </script>
 
-    <link rel="canonical" href="https://arendamed82.ru/sevastopol" />
-    
+      
     <meta property="og:title" content="Аренда медицинских кроватей в Севастополе" />
     <meta property="og:description" content="Аренда медицинских кроватей для лежачих больных в Севастополе. Быстрая доставка и доступные цены." />
-    <meta property="og:image" content="https://arendamed82.ru/assets/images/logo1.svg" />
-    <meta property="og:url" content="https://arendamed82.ru/sevastopol" />
+    <meta property="og:image" content="https://arendamed82.ru/images/Woman_img_light.webp" />
+    <meta property="og:url" content="https://arendamed92.ru" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Аренда медицинских кроватей в Севастополе" />
     <meta name="twitter:description" content="Аренда медицинских кроватей для лежачих больных в Севастополе. Комфорт, безопасность, доступные цены." />
-    <meta name="twitter:image" content="https://arendamed82.ru/assets/images/logo1.svg" />
+    <meta name="twitter:image" content="https://arendamed82.ru/images/Woman_img_light.webp" />
 
     <meta name="geo.region" content="RU-SVP" />
     <meta name="geo.placename" content="Севастополь" />
