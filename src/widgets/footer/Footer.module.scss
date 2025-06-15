@@ -30,3 +30,12 @@
     color: #8d5cf6;
   }
 }
+
+.footerLink {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}

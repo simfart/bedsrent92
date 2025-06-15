@@ -1,0 +1,161 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.popupButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  animation: pulse 2s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: #1d4ed8;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popupContent {
+  background-color: white;
+  border-radius: 14px;
+  padding: 32px;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #999;
+  cursor: pointer;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  input,
+  textarea {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  button[type='submit'] {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #1d4ed8;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+.success {
+  animation: flashSuccess 0.5s ease-out;
+  color: green;
+}
+
+@keyframes flashSuccess {
+  from {
+    background-color: #d1fae5;
+  }
+  to {
+    background-color: transparent;
+  }
+}

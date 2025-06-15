@@ -23,5 +23,5 @@
     "noUncheckedSideEffectImports": true,
      "baseUrl": "src"
   },
-  "include": ["src"]
+  "include": ["src", "error-page.tsx", "pages/privacy-policy.page.tsx"]
 }

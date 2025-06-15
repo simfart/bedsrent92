@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styles from './Footer.module.scss';
 import { mailIcon, phoneIcon } from 'shared/assets/images';
+import { Link } from 'react-router-dom';
 
 export const Footer: FC = () => {
   return (
@@ -14,6 +15,9 @@ export const Footer: FC = () => {
           <img src={mailIcon} alt="Email" />
           <span>contact@arendamed92.ru</span>
         </a>
+        <Link to="/privacy-policy" className={styles.footerLink}>
+          Политика конфиденциальности
+        </Link>
       </div>
     </footer>
   );
