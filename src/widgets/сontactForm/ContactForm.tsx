@@ -1,29 +1,34 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState('');
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [status, setStatus] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Инициализация EmailJS (обязательно, если используешь старую версию)
+    emailjs.init('vh3BcaTr0pMZI7IpD');
+  }, []);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-
+    console.log('Попытка отправки формы...');
     if (!formRef.current) return;
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID', // ← вставь свой
-        'YOUR_TEMPLATE_ID', // ← вставь свой
+        'yandex_smtp',
+        'template_ts4skw6',
         formRef.current,
-        'YOUR_PUBLIC_KEY', // ← вставь свой
+        'vh3BcaTr0pMZI7IpD',
       )
       .then(() => {
         setStatus('✅ Сообщение отправлено!');
         formRef.current?.reset();
       })
-      .catch((err) => {
-        console.error(err);
-        setStatus('❌ Ошибка при отправке.');
+      .catch((error) => {
+        console.error('Ошибка отправки:', error);
+        setStatus('❌ Ошибка отправки. Проверь консоль.');
       });
   };
 
@@ -33,7 +38,7 @@ const ContactForm = () => {
       <input type="email" name="email" placeholder="Ваш email" required />
       <textarea name="message" placeholder="Сообщение" required />
       <button type="submit">Отправить</button>
-      <p>{status}</p>
+      {status && <p>{status}</p>}
     </form>
   );
 };

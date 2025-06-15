@@ -3,6 +3,7 @@ import styles from './MainContent.module.scss';
 import ProductList from 'features/productList/ProductList';
 import Faq from 'features/faq/Faq';
 import { Description } from 'features/description/Description';
+import { ContactForm } from 'shared/сontactForm/ContactForm';
 
 export const MainContent: FC = () => {
   return (
@@ -25,6 +26,7 @@ export const MainContent: FC = () => {
       <Description />
       <ProductList />
       <Faq />
+      <ContactForm />
     </main>
   );
 };
