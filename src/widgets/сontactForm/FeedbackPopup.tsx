@@ -40,7 +40,7 @@ export const FeedbackPopup = () => {
             >
               ×
             </button>
-            <h2>Связаться с нами</h2>
+            <h2 className={styles.popupTitle}>Связаться с нами</h2>
             <ContactForm />
           </div>
         </div>
