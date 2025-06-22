@@ -97,7 +97,7 @@
 }
 
 .mainViewer {
-  position: relative;
+  position: relative; // Обязательно!
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,6 +108,7 @@
   @include respond-to(mobile) {
     width: 100%;
     margin: 0;
+    overflow: visible;
   }
 }
 
@@ -132,27 +133,46 @@
 }
 
 .navButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  padding: 8px;
-  font-size: 24px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 2;
-
-  &:first-of-type {
-    left: 10px;
-  }
-
-  &:last-of-type {
-    right: 10px;
-  }
+  color: $color-primary;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+  opacity: 0.8;
 
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+
+  &:first-of-type {
+    left: 0;
+  }
+
+  &:last-of-type {
+    right: 0;
+  }
+
+  @include respond-to(mobile) {
+    &:first-of-type {
+      left: -16px;
+    }
+
+    &:last-of-type {
+      right: -16px;
+    }
   }
 }
 
@@ -190,7 +210,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.1px;
-    color: $color-secondary;
+    color: #ff7b52;
   }
 
   p {

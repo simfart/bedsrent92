@@ -1,6 +1,6 @@
+// Удалите StaticRouter
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom/server';
 import { PageContextServer } from './types.ts';
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server';
 
@@ -8,9 +8,7 @@ export async function render(pageContext: PageContextServer) {
   const { Page } = pageContext;
   const pageHtml = renderToString(
     <React.StrictMode>
-      <StaticRouter location={pageContext.urlOriginal}>
-        <Page />
-      </StaticRouter>
+      <Page />
     </React.StrictMode>,
   );
 
@@ -39,7 +37,7 @@ export async function render(pageContext: PageContextServer) {
       "@type": "LocalBusiness",
       "name": "Аренда медицинских кроватей в Севастополе",
       "description": "Предоставляем в аренду медицинские кровати и средства реабилитации с доставкой по Севастополю.",
-      "url": "https://arendamed82.ru",
+      "url": "https://arendamed92.ru",
       "telephone": "+7 (978) 941-09-60",
       "priceRange": "₽₽",
       "address": {
@@ -56,7 +54,7 @@ export async function render(pageContext: PageContextServer) {
         "longitude": "33.52536"
       },
       "openingHours": "Mo-Su 09:00-21:00",
-      "image": "https://arendamed82.ru/assets/images/logo1.svg",
+      "image": "https://arendamed92.ru/assets/images/logo1.svg",
       "sameAs": [
         "https://vk.com/club32436534",
         "https://www.instagram.com/medicalbeds/"
@@ -74,14 +72,14 @@ export async function render(pageContext: PageContextServer) {
       
     <meta property="og:title" content="Аренда медицинских кроватей в Севастополе" />
     <meta property="og:description" content="Аренда медицинских кроватей для лежачих больных в Севастополе. Быстрая доставка и доступные цены." />
-    <meta property="og:image" content="https://arendamed82.ru/images/Woman_img_light.webp" />
+    <meta property="og:image" content="https://arendamed92.ru/images/Woman_img_light.webp" />
     <meta property="og:url" content="https://arendamed92.ru" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Аренда медицинских кроватей в Севастополе" />
     <meta name="twitter:description" content="Аренда медицинских кроватей для лежачих больных в Севастополе. Комфорт, безопасность, доступные цены." />
-    <meta name="twitter:image" content="https://arendamed82.ru/images/Woman_img_light.webp" />
+    <meta name="twitter:image" content="https://arendamed92.ru/images/Woman_img_light.webp" />
 
     <meta name="geo.region" content="RU-SVP" />
     <meta name="geo.placename" content="Севастополь" />
@@ -112,7 +110,7 @@ export async function render(pageContext: PageContextServer) {
       "name": "В какие районы Севастополя осуществляется доставка?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Мы доставляем кровати по всему Севастополю и пригородам. Быстрая и надёжная доставка в удобное для вас время — прямо до двери."
+        "text": "Мы доставляем кровати по всему Севастополю и пригороду. Быстрая и надёжная доставка в удобное для вас время — прямо до двери."
       }
     },
     {

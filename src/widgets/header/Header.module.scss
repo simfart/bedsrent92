@@ -14,7 +14,9 @@
     align-items: center;
     gap: 10px;
 
-    @include respond-to(tablet) {
+ 
+    
+    @media (max-width: 935px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -101,7 +103,8 @@
       transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    @include respond-to(tablet) {
+   
+    @media (max-width: 935px) {
       display: flex;
     }
   }
@@ -167,12 +170,12 @@
     padding: 40px 20px;
     display: none;
 
-    @include respond-to(tablet) {
+ 
+
+    @media (max-width: 935px) {
       display: block;
     }
-    @include respond-to(mobile) {
-      // padding: 20px 10px;
-    }
+   
 
     ul {
       list-style: none;
@@ -190,7 +193,7 @@
       }
     }
 
-    button {
+    a {
       background: none;
       border: none;
       font-weight: 700;
@@ -218,9 +221,11 @@
     display: flex;
     margin-left: 41px;
 
-    @include respond-to(tablet) {
+    @media (max-width: 935px) {
       display: none;
     }
+
+   
 
     ul {
       list-style: none;
@@ -228,13 +233,16 @@
       display: flex;
       padding: 0;
       margin: 0;
+      @include respond-to(midDesktop) {
+        gap: 10px;
+      }
     }
 
     li {
       gap: 21px;
     }
 
-    button {
+    a {
       background: none;
       border: none;
       font-weight: 700;

@@ -1,0 +1,147 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+
+  @include respond-to(mobile) {
+    padding: 10px;
+    max-width: 100%;
+  }
+}
+
+.reviewCard {
+  padding: 18px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0px 2px 12px rgba(31, 45, 61, 0.1);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: start;
+}
+
+.text {
+  font-size: 16px;
+  margin-bottom: 32px;
+  color: $color-text-secondary;
+  text-align: start;
+}
+
+.reviewer {
+  display: flex;
+}
+.initials {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  @include respond-to(mobile) {
+    width: 42px;
+    height: 42px;
+  }
+}
+.reviewerAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 16px;
+  color: $color-text-secondary;
+  font-size: 16px;
+  line-height: 140%;
+
+  @include respond-to(mobile) {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}
+
+.name {
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color-primary;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+
+  &.left {
+    left: -10px;
+  }
+
+  &.right {
+    right: -10px;
+  }
+
+  @include respond-to(mobile) {
+    font-size: 18px;
+
+    &.left {
+      left: -2px;
+      padding: 0;
+    }
+
+    &.right {
+      right: -2px;
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    max-width: 600px;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.reviewCard {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fadeOutIn {
+  opacity: 0;
+  transform: translateX(10px);
+}

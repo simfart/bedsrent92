@@ -8,8 +8,6 @@ const Faq: FC = () => {
     <section
       id="faq"
       className={styles.faq}
-      itemScope
-      itemType="https://schema.org/FAQPage"
     >
       <h2 className={styles.subtitle}>
         Аренда медицинского оборудования в Севастополе — ответы на частые

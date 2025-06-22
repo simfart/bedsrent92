@@ -1,22 +1,11 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { logoImg, phoneLightIcon } from 'shared/assets/images';
+import { Link } from 'shared/ui/Link';
 import styles from './Header.module.scss';
 
 export const Header: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleClick = (id: string) => {
-    scrollToSection(id);
-    setMenuOpen(false);
-  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -41,37 +30,48 @@ export const Header: FC = () => {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <div className={styles.headerContainer}>
-          <div className={styles.logo}>
+          <Link to="/" className={styles.logo}>
             <img src={logoImg} alt="Логотип" />
             <div className={styles['logo-title']}>МедЮг АРЕНДА</div>
-          </div>
+          </Link>
 
           <nav className={styles.desktopMenu}>
             <ul>
               <li>
-                <button
-                  onClick={() => handleClick('main')}
+                <Link
+                  to="/#main"
                   aria-label="Переход на главную страницу"
                 >
                   Главная
-                </button>
+                </Link>
               </li>
 
               <li>
-                <button
-                  onClick={() => handleClick('products')}
+                <Link
+                  to="/#products"
+                  onClick={() => setMenuOpen(false)}
                   aria-label="Переход к вариантам аренды"
                 >
                   Выбор кровати
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleClick('faq')}
+                <Link
+                  to="/#faq"
+                  onClick={() => setMenuOpen(false)}
                   aria-label="Переход к вопросам и ответам"
                 >
                   Вопросы и ответы
-                </button>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#reviews"
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Переход к отзывам"
+                >
+                  Отзывы
+                </Link>
               </li>
             </ul>
           </nav>
@@ -109,29 +109,41 @@ export const Header: FC = () => {
         <nav className={styles.menu}>
           <ul>
             <li style={{ animationDelay: '0.1s' }}>
-              <button
-                onClick={() => handleClick('main')}
+              <Link
+                to="/#main"
+                onClick={() => setMenuOpen(false)}
                 aria-label="Переход на главную страницу"
               >
                 Главная
-              </button>
+              </Link>
             </li>
 
             <li style={{ animationDelay: '0.3s' }}>
-              <button
-                onClick={() => handleClick('products')}
+              <Link
+                to="/#products"
+                onClick={() => setMenuOpen(false)}
                 aria-label="Переход к вариантам аренды"
               >
                 Выбор кровати
-              </button>
+              </Link>
             </li>
             <li style={{ animationDelay: '0.3s' }}>
-              <button
-                onClick={() => handleClick('faq')}
+              <Link
+                to="/#faq"
+                onClick={() => setMenuOpen(false)}
                 aria-label="Переход к вопросам и ответам"
               >
                 Вопросы и ответы
-              </button>
+              </Link>
+            </li>
+            <li style={{ animationDelay: '0.3s' }}>
+              <Link
+                to="/#reviews"
+                onClick={() => setMenuOpen(false)}
+                aria-label="Переход к отзывам"
+              >
+                Отзывы
+              </Link>
             </li>
           </ul>
         </nav>

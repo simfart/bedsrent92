@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useSwipeable } from 'react-swipeable';
-import styles from './ProductGallery.module.scss';
 import { Product } from 'shared/assets/types/product';
+import { useSwipeNavigation } from 'shared/hooks/useSwipeNavigation';
+
+
+import styles from './ProductGallery.module.scss';
 
 interface Props {
   product: Product;
@@ -31,15 +33,12 @@ export const ProductGallery: React.FC<Props> = ({ product }) => {
     );
   };
 
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleNext,
-    onSwipedRight: handlePrev,
-    trackMouse: true,
-    touchEventOptions: { passive: false },
+  const swipeHandlers = useSwipeNavigation({
+    onNext: handleNext,
+    onPrev: handlePrev,
   });
 
   if (!isHydrated) {
-    // 🔒 Статичный SSR-контент, чтобы избежать несовпадений
     return (
       <div className={styles.galleryContainer}>
         <div className={styles.infoPanel}>
@@ -98,7 +97,7 @@ export const ProductGallery: React.FC<Props> = ({ product }) => {
           className={styles.navButton}
           aria-label="Предыдущее изображение"
         >
-          ‹
+          &#10094;
         </button>
 
         <div {...swipeHandlers} className={styles.mediaWrapper}>
@@ -109,6 +108,7 @@ export const ProductGallery: React.FC<Props> = ({ product }) => {
               src={currentMedia.src}
               controls
               className={styles.mainMedia}
+              poster={currentMedia.poster || currentMedia.src}
             />
           )}
         </div>
@@ -118,7 +118,7 @@ export const ProductGallery: React.FC<Props> = ({ product }) => {
           className={styles.navButton}
           aria-label="Следующее изображение"
         >
-          ›
+          &#10095;
         </button>
       </div>
 

@@ -1,9 +1,11 @@
 import { FC } from 'react';
-import styles from './MainContent.module.scss';
 import ProductList from 'features/productList/ProductList';
 import Faq from 'features/faq/Faq';
 import { Description } from 'features/description/Description';
 import { FeedbackPopup } from 'widgets/сontactForm/FeedbackPopup';
+import { Review } from 'widgets/review/Review';
+import styles from './MainContent.module.scss';
+
 
 export const MainContent: FC = () => {
   return (
@@ -27,6 +29,7 @@ export const MainContent: FC = () => {
       <ProductList />
       <Faq />
       <FeedbackPopup />
+      <Review />
     </main>
   );
 };

@@ -10,17 +10,11 @@ export const FaqItem: FC<FaqItemProps> = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div
-      className={styles.faqItem}
-      itemScope
-      itemProp="mainEntity"
-      itemType="https://schema.org/Question"
-    >
+    <div className={styles.faqItem}>
       <button
         className={styles.question}
         onClick={() => setOpen(!open)}
         aria-expanded={open}
-        itemProp="name"
       >
         {question}
         <svg
@@ -38,14 +32,9 @@ export const FaqItem: FC<FaqItemProps> = ({ question, answer }) => {
         </svg>
       </button>
 
-      <div
-        className={`${styles.answerWrapper} ${open ? styles.open : ''}`}
-        itemScope
-        itemProp="acceptedAnswer"
-        itemType="https://schema.org/Answer"
-      >
+      <div className={`${styles.answerWrapper} ${open ? styles.open : ''}`}>
         <div className={styles.answer}>
-          <p itemProp="text">{answer}</p>
+          <p>{answer}</p>
         </div>
       </div>
     </div>

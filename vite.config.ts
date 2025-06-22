@@ -23,9 +23,99 @@ export default defineConfig({
       inject: {
         data: {
           preloadTags: `
-            <link rel="preload" href="/assets/static/index.css" as="style">
-            <link rel="preload" href="/assets/static/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-            <link rel="preload" href="/assets/static/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+            <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+            <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+          `,
+          globalStyles: `
+            <style>
+              @font-face {
+                font-family: 'Montserrat';
+                src: url('/fonts/Montserrat-Bold.woff2') format('woff2');
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+              }
+
+              @font-face {
+                font-family: 'Montserrat';
+                src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+              }
+
+              :root {
+                font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
+                line-height: 1.5;
+                font-weight: 400;
+                font-synthesis: none;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                max-width: 1440px;
+                margin: 0 auto;
+              }
+
+              body {
+                font-family: 'Montserrat', Arial, sans-serif;
+                font-style: normal;
+                font-size: 14px;
+                color: #252b42;
+                margin: 0;
+                background-color: #ffffff;
+              }
+
+              #root {
+                max-width: 1440px;
+                margin: 0 auto;
+                text-align: center;
+                width: 100%;
+              }
+
+              h1, h2, h3, p {
+                margin: 0;
+              }
+
+              * {
+                box-sizing: border-box;
+              }
+
+              @media (max-width: 576px) {
+                body {
+                  font-size: 14px;
+                }
+
+                h1 {
+                  font-size: 1.8rem;
+                }
+
+                h2 {
+                  font-size: 1.5rem;
+                }
+
+                h3 {
+                  font-size: 1.3rem;
+                }
+              }
+
+              @media (max-width: 880px) {
+                body {
+                  font-size: 16px;
+                }
+
+                h1 {
+                  font-size: 2.2rem;
+                }
+
+                h2 {
+                  font-size: 1.8rem;
+                }
+
+                h3 {
+                  font-size: 1.5rem;
+                }
+              }
+            </style>
           `,
         },
       },
@@ -75,6 +165,7 @@ export default defineConfig({
       features: path.resolve(__dirname, './src/features'),
       entities: path.resolve(__dirname, './src/entities'),
       widgets: path.resolve(__dirname, './src/widgets'),
+      pages: path.resolve(__dirname, './src/pages'),
       styles: path.resolve(__dirname, './src/app/styles'),
     },
   },

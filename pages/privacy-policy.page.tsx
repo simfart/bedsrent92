@@ -1,18 +1,13 @@
-import { Header } from 'widgets/header/Header';
-import { PrivacyPolicy } from 'shared/privacyPolicy/PrivacyPolicy';
-import { Footer } from 'widgets/footer/Footer';
+import { PrivacyPolicyPage } from 'pages/privacyPolicyPage/PrivacyPolicyPage';
 
-function PrivacyPolicyPage() {
+function PrivacPolicyPage() {
   return (
     <>
-      <Header />
-      <PrivacyPolicy />
-      <Footer />
+      <PrivacyPolicyPage />
     </>
   );
 }
 
-// Vike ждёт именно «object with Page»
 export default {
-  Page: PrivacyPolicyPage,
+  Page: PrivacPolicyPage,
 };

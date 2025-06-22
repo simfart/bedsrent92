@@ -3,4 +3,5 @@ export default {
     '/index': '/',
     '/pages/index': '/',
   },
+  clientRouting: true
 };

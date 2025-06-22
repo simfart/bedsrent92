@@ -30,6 +30,7 @@ import bed29Img from './2.9.webp';
 import bed210Img from './2.10.webp';
 import bed211Img from './2.11.webp';
 import bed212Img from './2.12.webp';
+import bedVid2 from './2.13.mp4';
 
 import wheelchair1Img from './image0.jpeg';
 import wheelchair2Img from './image1.jpeg';
@@ -40,6 +41,7 @@ import womanImg from './Woman_img_light.webp';
 import man2 from './Men2.webp';
 
 import poster from './video_poster.webp';
+import poster2 from './video_poster2.webp';
 
 export {
   manImg,
@@ -78,4 +80,6 @@ export {
   wheelchair3Img,
   man2,
   womanImg,
+  bedVid2,
+  poster2,
 };

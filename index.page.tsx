@@ -1,6 +1,6 @@
 import React from 'react';
-import { App } from './src/app/App';
+import { MainPage } from './src/pages/mainPage/MainPage';
 
 export function Page() {
-  return <App />;
+  return <MainPage />;
 }

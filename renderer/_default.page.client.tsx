@@ -1,6 +1,6 @@
+// Удалите BrowserRouter
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import { PageContextClient } from './types.ts';
 
 export async function render(pageContext: PageContextClient) {
@@ -8,9 +8,7 @@ export async function render(pageContext: PageContextClient) {
   ReactDOM.hydrateRoot(
     document.getElementById('app')!,
     <React.StrictMode>
-      <BrowserRouter>
-        <Page />
-      </BrowserRouter>
+      <Page />
     </React.StrictMode>
   );
 }

@@ -25,6 +25,8 @@ import {
   wheelchair1Img,
   wheelchair2Img,
   wheelchair3Img,
+  bedVid2,
+  poster2,
 } from 'shared/assets/images';
 import { Product } from 'shared/assets/types/product';
 
@@ -48,6 +50,7 @@ export const products: Product[] = [
         altLabel:
           'Медицинская кровать с электроприводом и туалетным устройством в аренду Севастополь',
       },
+      { type: 'video', src: bedVid, poster: poster },
       {
         type: 'image',
         src: bed13Img,
@@ -66,7 +69,6 @@ export const products: Product[] = [
         altLabel:
           'Медицинская кровать с электроприводом и туалетным устройством в аренду Севастополь',
       },
-      { type: 'video', src: bedVid, poster: poster },
 
       {
         type: 'image',
@@ -113,6 +115,7 @@ export const products: Product[] = [
         altLabel:
           'Медицинские кровати для лежачих больных с функцией переворачивания',
       },
+      { type: 'video', src: bedVid2, poster: poster2 },
       {
         type: 'image',
         src: bed23Img,
