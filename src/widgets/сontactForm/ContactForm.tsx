@@ -13,9 +13,8 @@ export const ContactForm: React.FC = () => {
   const [consent, setConsent] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const RECAPTCHA_SITE_KEY = '6Lddz2krAAAAAD7xedwpJ75pa2ltnt8Wz-kQGb3z';
+  const RECAPTCHA_SITE_KEY = '6LdgzGkrAAAAADKqwnHOaK_ZF4ozH0Ia94xU9O1k';
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-
 
   useEffect(() => {
     emailjs.init('vh3BcaTr0pMZI7IpD');

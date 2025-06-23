@@ -99,7 +99,7 @@ export const PrivacyPolicy: React.FC = () => {
         <p>
           Если у вас есть вопросы по Политике конфиденциальности, вы можете
           связаться с нами по e-mail:{' '}
-          <a href="mailto:arendamed82@yandex.ru">contact@arendamed92.ru</a>.
+          <a href="mailto:arendamed92@yandex.ru">contact@arendamed92.ru</a>.
         </p>
       </section>
 

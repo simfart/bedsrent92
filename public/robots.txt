@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 Disallow: /pages/index
+Disallow: /index.html
+Disallow: /index.php
+Disallow: /index
+
+# Разрешаем индексацию основных страниц
+Allow: /privacy-policy
+Allow: /#main
+Allow: /#products
+Allow: /#faq
+
 Sitemap: https://arendamed92.ru/sitemap.xml
